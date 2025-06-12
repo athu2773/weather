@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+  <div class="w-full max-w-xl">
+    <h1 class="text-3xl font-bold text-center mb-6"> Weather App</h1>
+
+    <div class="flex mb-4">
+      <input id="searchInput" type="text" placeholder="Enter city name" class="w-full p-2 rounded-l-md border" />
+      <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded-r-md">Search</button>
+    </div>
+
+    <div id="weatherInfo" class="bg-white rounded-md shadow p-4 hidden">
+      <h2 id="cityName" class="text-xl font-bold"></h2>
+      <p><span id="temp"></span> °C</p>
+      <p id="desc"></p>
+      <p>Humidity: <span id="humidity"></span>%</p>
+      <p>Wind Speed: <span id="wind"></span> m/s</p>
+      <img id="icon" alt="Weather Icon" class="w-16 h-16 mt-2" />
+      <button id="forecastBtn" class="mt-4 bg-green-500 text-white px-3 py-1 rounded">5-Day Forecast</button>
+    </div>
+
+    <div id="error" class="text-red-600 mt-2"></div>
+    <div id="map" class="w-full h-64 mt-6 rounded shadow hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmym33rBKAKMnKjTbPPLSszQXHF_C1O8A"></script>
+</body>
+</html>
